@@ -15,7 +15,7 @@ Prerequisites
 
 - Internet Connecxion
 - text editor exemple (visual Studio Code , Atom ...)
-- Web browser
+- Web browser ( for the moment it work only in chrome web browser)
 
 
 Installing
