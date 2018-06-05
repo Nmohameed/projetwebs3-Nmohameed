@@ -1,9 +1,9 @@
 # projetwebs3-Nmohameed
 
- Project Title
+ ### Project Title
  
  
-Photographe Application 
+ # Photographe Application 
 
 
 Getting Started
@@ -11,14 +11,14 @@ Getting Started
 -These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
 
-Prerequisites
+## Prerequisites
 
 - Internet Connecxion
 - text editor exemple (visual Studio Code , Atom ...)
 - Web browser ( for the moment it work only in chrome web browser)
 
 
-Installing
+## Installing
 
 A step by step series of examples that tell you how to run a project 
 
