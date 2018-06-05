@@ -1,0 +1,44 @@
+<ul *ngIf="brands" class="nav nav-tabs">
+  <li *ngFor="let brand of brands" class="nav-item">
+    <a (click)="onSelectedBrand(brand)" class="nav-link" data-toggle="tab" href="#home">{{ brand }}</a>
+  </li>
+</ul>
+<ul *ngIf="locations" class="nav nav-tabs">
+  <li *ngFor="let location of locations" class="nav-item">
+    <a (click)="onSelectLocation(location)" class="nav-link" data-toggle="tab" href="#home">{{ location }}</a>
+  </li>
+  <a class="nav-link" data-toggle="tab" id="all" (click)=clearLocation();clearBrand()>All</a>
+
+</ul>
+
+
+<div class="row mt-5">
+  <div class="col-md-4 mb-3" *ngFor="let Mychoice of Mychoices | filter: [selectedLocation, selectedBrand]">
+
+    <h3 class="card-title"> {{Mychoice.markCamera}}</h3>
+    <div class="card">
+      <img style="width: 100%" src="{{Mychoice.picture}}">
+
+      <br/>
+
+      <div class="card-content">
+        <h4 class="card-text"> Model of Camera : {{Mychoice.modelCamera}}</h4>
+        <h5 class="card-text">Type : {{Mychoice.typePhoto}} </h5>
+        <h6 class="card-text"> Place : {{Mychoice.placePhoto}}</h6>
+
+      </div>
+
+
+      <div class="card-read-more">
+        <a (click)="getData(Mychoice.markCamera, Mychoice.modelCamera, Mychoice.typePhoto, Mychoice.placePhoto)" class="btn btn-link btn-block "
+          routerLink='/update-setting'>
+          Update
+        </a>
+        <a (click)="removeSetting(Mychoice.markCamera, Mychoice.modelCamera, Mychoice.typePhoto, Mychoice.placePhoto);refresh()"
+          class="btn btn-link btn-block text-danger" routerLink='/update-setting'>
+          Delete
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

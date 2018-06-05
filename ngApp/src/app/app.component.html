@@ -1,0 +1,35 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="#">Share Your Photo  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+    aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/addCamera" *ngIf='_authservice.loggedIn()' routerLinkActive="active">Add Camera</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/setting" *ngIf='_authservice.loggedIn()' routerLinkActive="active"> Setting</a>
+      </li>
+    </ul>
+
+    <ul class="navbar-nav">
+
+      <a class="nav-link" *ngIf='!_authservice.loggedIn()' routerLink="/login" routerLinkActive="active"> Login</a>
+      <a class="nav-link btn btn-secondary" *ngIf='!_authservice.loggedIn()' routerLink="/register" routerLinkActive="active">Register</a>
+
+      <a class="nav-link" style="cursor: pointer" *ngIf='_authservice.loggedIn()' routerLink="/update-setting" routerLinkActive="active">
+      Update</a>
+
+      <a class="nav-link" style="cursor: pointer" *ngIf='_authservice.loggedIn()' routerLink="/account" routerLinkActive="active">
+      Account</a>
+      <a class="nav-link" style="cursor:pointer" *ngIf='_authservice.loggedIn()' (click)='_authservice.logoutUser()'>Logout</a>
+
+    </ul>
+  </div>
+</nav>
+
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
