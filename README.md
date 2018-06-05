@@ -13,7 +13,7 @@ Getting Started
 
 ## Prerequisites
 
-- Internet Connecxion
+- Internet Connexion
 - text editor exemple (visual Studio Code , Atom ...)
 - Web browser ( for the moment it work only in chrome web browser)
 
