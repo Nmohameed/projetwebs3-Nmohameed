@@ -1,9 +1,7 @@
 # projetwebs3-Nmohameed
-
- # Project Title
  
  
- ### Photographe Application 
+ # Photographe Application 
 
 
 Getting Started
