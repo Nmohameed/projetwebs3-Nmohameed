@@ -1,7 +1,7 @@
 const  mongoose = require('mongoose');
 const Schema = mongoose.Schema
 
- // My model objectChoice
+ // My mongoose model objectChoice
 let objectChoice = new Schema({
     markCamera: String,
     modelCamera : String,
@@ -12,6 +12,6 @@ let objectChoice = new Schema({
 
     
 })
-
+// I export My Model objectChoice 
 module.exports = mongoose.model('objectChoice', objectChoice);
 
