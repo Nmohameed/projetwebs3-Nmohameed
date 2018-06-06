@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CameraService } from '../camera.service';
 import { Router } from '@angular/router';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-setting-for-user',
@@ -17,7 +18,7 @@ export class SettingForUserComponent implements OnInit {
     "creator": ""
   }
   locations = ["Conference and meeting rooms", "Well-lit apartment", "Well lit street", "Full moon night"]
-  brands = ["nikon", "canon"]
+  brands = ["Nikon", "Canon"]
 
 
   constructor(private _cameraService: CameraService, private _router: Router) { }
@@ -45,6 +46,17 @@ getData(markCamera, modelCamera, typePhoto, placePhoto){
       res => this.Mychoices = res,
       err => console.log(err)
       )
+
+      $(document).ready(function() {
+        $("#filter-bar li").click(function() {
+          $("#filter-bar li").removeClass("active");
+          $(this).addClass("active");
+          $("#filter-bar")
+            .removeClass()
+            .addClass($(this).attr("data-target"));
+        });
+      });
+      
   }
 
   onSelectLocation(location: string) {

@@ -14,7 +14,7 @@ export class AddcameraComponent implements OnInit {
     "creator": ""
   }
 
-  brands = ["nikon", "canon"]
+  brands = ["Nikon", "Canon"]
   models = ["550D", "6D", "70D", "D850", "D7500", "D500"]
   photoTypes = ["Portrait", "Landscape", "Sport" , "Black and White", "Dance Photography" , "Food Photography"]
   locations = ["Conference and meeting rooms", "Well-lit apartment", "Well night street", "Full moon night"]
