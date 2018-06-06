@@ -43,6 +43,7 @@ export class AccountComponent extends LoginComponent implements OnInit {
     this._auth.updateUser(this.UserData)
       .subscribe(
       res => {
+        localStorage.removeItem('id')
         this._router.navigate(['/login'])
         console.log(res)
       },

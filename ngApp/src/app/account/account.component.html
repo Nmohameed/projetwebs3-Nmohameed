@@ -14,7 +14,7 @@
             <label for="">Password</label>
             <input [(ngModel)]="UserData.password" name="password" type="password" class="form-control rounded-0" required>
           </div>
-          <button type="button" (click)='updateUser()' class="btn btn-primary float-right">Update account</button>
+          <button type="button" routerLink (click)='updateUser()' class="btn btn-primary float-right">Update account</button>
           <button type="button" (click)="removeUser()" class="btn btn-danger">Delete account</button>
         </form>
       </div>
